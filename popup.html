@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+        }
+        .format-option {
+            margin: 10px 0;
+        }
+        select {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<h3>Time Format Settings</h3>
+<div class="format-option">
+    <select id="timeFormat">
+        <option value="HH:mm">Time only (14:30)</option>
+        <option value="HH:mm:ss">24-hour format (14:30:00)</option>
+        <option value="hh:mm:ss a">12-hour format (02:30:00 PM)</option>
+        <option value="YYYY-MM-DD HH:mm:ss">Full datetime (2024-01-06 14:30:00)</option>
+        <option value="MM/DD/YYYY HH:mm">Date and time (01/06/2024 14:30)</option>
+        <option value="custom">Custom format</option>
+    </select>
+</div>
+<div id="customFormatDiv" style="display: none;">
+    <input type="text" id="customFormat" placeholder="Enter custom format (e.g., YYYY-MM-DD HH:mm)" style="width: 100%;">
+</div>
+<div id="preview" style="margin-top: 10px;">
+    Preview: <span id="previewText"></span>
+</div>
+<script src="timeFormatter.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
